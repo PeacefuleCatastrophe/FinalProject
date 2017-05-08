@@ -250,4 +250,9 @@ public class Scene {
 				}
 			}	
 	}
+	public static void wellbeingDeath(){
+		if (wellbeing <= -3){
+		System.out.println("Oh no! You "	
+		}
+	}
 }
