@@ -224,5 +224,16 @@ public class Scene {
 	public static void Nighttime() {
 
 	}
+	
+	public static void goodNight() {
+		System.out.println("You walk back, dazed and confused, to your room. You collapse on your bed, having made it through a completely ordinary day. Good Night!");
+		if (Counter.getHunger() <= 0){
+		Counter.showWellbeing();
+		}
+		else {
+			System.out.println("You wake up as your tummy rumbles, cursing you for not filling it during the day. Thus, you have lost the most important battle.")
+		}
+		
+	}
 
 }
