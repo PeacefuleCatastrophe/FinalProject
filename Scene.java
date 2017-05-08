@@ -222,7 +222,32 @@ public class Scene {
 	}
 
 	public static void Nighttime() {
-
+		System.out.println("The night air is chilly but alive with the warmth of bustling bodies and alcohol. But you know you shouldn't go out tonight. Your unfinished pset fills you with guilt. Do you go to office hours (1) or bite the bullet and go to WOADS(2)?");
+		Scanner console = new Scanner(System.in);
+		int ProcrastinateAns = console.nextInt();
+			if (ProcrastinateAns == 1){
+				System.out.println("You drag yourself through the cold to a tiny room full of panicking students and jovial TAs. Of course, there are a few students who are completely chill because they finished the pset the hour it was posted and only came here to laugh at plebs like you. One of them points out that pizza was promised at office hours. You could second his request for nourishment (1) or focus on your pset (2). Note that the pizza will be Papa Johns.");
+				int pizzaChoice = console.nextInt();
+				if (pizzaChoice == 1){
+					System.out.println("You wail frantically for pizza, praying to Steve Jobs' ghost for a large Papa Johns. You receive it, and take a big gooey bite while your peers gorge themselves on the garlic sauce. However, the promise of the great Johns distracted you from work."
+							   Counter.HungerDown();
+							   Counter.WellbeingDown();
+				}
+				else {
+					System.out.println("You bite your lips, resisting the allure of pizza and let the overly enthusiastic pizza-wanter drown under the combined pressure of the death glares your peers heap on him. That puts you in a happy mood and the gods of the computing take pity on you at last, fixing your code in an inexplicable way!")
+						Counter.WellbeingUp();
+				}
+			}
+			else {
+				System.out.println("You bite the bullet, throwing caution to the wind. Speaking of wind, it's cold out. Did you bring your jacket? Yes (1) No (2).");
+				int jacket = console.nextInt();
+				if (jacket == 1){
+					System.out.println("Of course you did, doing otherwise would be irresponsible! You join the seething mass of bodies inside Toads, and get puked out at 1am, sans jacket.");
+					Counter.WellbeingDown();
+				}
+				else {
+					System.out.println("Well, whatever. Hopefully the dancing will warm you up! You jump into the swirling whirpool of dancers and leave the club at 1.");
+				}
+			}	
 	}
-
 }
