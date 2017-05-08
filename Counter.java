@@ -51,4 +51,6 @@ public static void Wellbeing2Up(){
  public static int getHunger();{
 	return hunger;
 }
+public static int getWellbeing();{
+	return wellbeing;
 }
