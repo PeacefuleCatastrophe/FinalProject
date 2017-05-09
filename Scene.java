@@ -256,7 +256,7 @@ public class Scene {
 		}
 		public static void aCapella(){
 
-				int throat = (int) Math.round((Math.random()));
+				int throat = (int) Math.round(Math.random());
 				System.out.println("You join your bestest buddies and sing your heart out during rehearsals!");
 					if (throat == 0){
 						System.out.print("You hit the perfect notes and walk away fine!");
@@ -274,18 +274,18 @@ public class Scene {
 			System.out.println("Of course you're going to go play an IM, and help your college win everlasting glory (for one semester.) \nYou reach the site of the game and your friend asks you to join them. What do you do? \nPLAY(1) Cheer from the sidelines(2).");
 			Scanner console = new Scanner(System.in);		
 			int play = console.nextInt();
-							   if (play == 1){
-								   System.out.println("You don the colors of your team and charge onto the field, roaring as loud as you can. \nYou give the game your all, but end up messing everything up and making your team lose! \nYou're a CS student, what did you expect?");
-								   Counter.WellbeingDown();
-							   }
-							   else if (play == 2){
-								   System.out.println("You join your friends on the sidelines, where you belong, and cheer your team to victory. \nThe players swear it was your loud cries that pushed them all the way.");
-								   Counter.WellbeingUp();
-							   }
-							   else{
-								 System.out.println("That was an invalid input");  
-								 intra();
-							   }
+				if (play == 1){
+					System.out.println("You don the colors of your team and charge onto the field, roaring as loud as you can. \nYou give the game your all, but end up messing everything up and making your team lose! \nYou're a CS student, what did you expect?");
+					Counter.WellbeingDown();
+				}
+				else if (play == 2){
+					System.out.println("You join your friends on the sidelines, where you belong, and cheer your team to victory. \nThe players swear it was your loud cries that pushed them all the way.");
+					Counter.WellbeingUp();
+				}
+				else{
+					System.out.println("That was an invalid input");  
+					intra();
+				}
 		}
 		public static void secondExtra(int beenDone){
 			Scanner console = new Scanner(System.in);
