@@ -5,20 +5,20 @@ import java.awt.*;
 import java.util.Scanner;
 
 public class Scene {
-	public static boolean HasStudied = false;
-	public static double SectionAnswer1;
-	public static int DinnerSecond = 1;
+	public static boolean hasStudied = false;
+	public static double sectionAnswer1;
+	public static int dinnerSecond = 1;
 
 	public static void Morning() {
 		Scanner console = new Scanner(System.in);
 
 		System.out.println("Good Morning! Do you want to stay in bed or head off to breakfast? (1 or 2)");
-		int AnswerMorning = console.nextInt();
-		if (AnswerMorning == 1) {
+		int answerMorning = console.nextInt();
+		if (answerMorning == 1) {
 			System.out.println(
 					"You get that much needed snooze button beauty rest and you feel better about the day ahead of you");
 			Counter.WellbeingUp();
-		} else if (AnswerMorning == 2) {
+		} else if (answerMorning == 2) {
 			System.out.println(
 					"You eat a wonderful breakfast, but it comes at a cost of being groggy and cranky because you missed that \nimportant snooze button beauty rest.");
 			Counter.WellbeingDown();
@@ -32,13 +32,13 @@ public class Scene {
 	public static void CS112() {
 		System.out.println();
 		Scanner console = new Scanner(System.in);
-		double CorrectAnswer = Math.round((Math.random() * 4));
+		double correctAnswer = Math.round((Math.random() * 4));
 		System.out.println(
 				"After a nice start to your day you trek over to Computer Science 112 with Professor Yang Yang.");
 		System.out.println(
 				"You get called on in class! input a number from 0 to 4 to see if you got the question right.");
-		int AnswerCS112 = console.nextInt();
-		if (AnswerCS112 == CorrectAnswer) {
+		int answerCS112 = console.nextInt();
+		if (answerCS112 == CorrectAnswer) {
 			System.out.println("You're a hotshot coder and you got the answer right!");
 			Counter.WellbeingUp();
 		} else {
@@ -52,10 +52,10 @@ public class Scene {
 				"You think to yourself that there is a 50% chance you get ex-commed for cheating, \nand a 50% chance you finish the PSET, and relieve youself of stress awarding you 2 wellbeing points.");
 		System.out.println("Cheat or No? (1/0)");
 
-		int AnswerCheat = console.nextInt();
-		if (AnswerCheat == 1) {
-			double FiftyFifty = Math.random();
-			if (FiftyFifty >= .5) {
+		int answerCheat = console.nextInt();
+		if (answerCheat == 1) {
+			double fiftyFifty = Math.random();
+			if (fiftyFifty >= .5) {
 				System.out.println(
 						"Congratulations you little rebel, you've cheated yourself, but more importantly the system.");
 				Counter.Wellbeing2Up();
@@ -77,23 +77,23 @@ public class Scene {
 		System.out.println(
 				"After a wonderful and informative lecture by your favorite CS professor you head to your favorite lunch spot \nout of Commons(1), Durfees(2) and your personal residential college dining hall(3)");
 		Scanner console = new Scanner(System.in);
-		int LunchAnswer = console.nextInt();
+		int lunchAnswer = console.nextInt();
 
-		if (LunchAnswer == 1) {
+		if (lunchAnswer == 1) {
 			System.out.println(
 					"You head to commons and go to town on the stir fry fried rice with a little touch of sriracha on top, \nthere's nothing like it and it makes you very happy.");
 			Counter.WellbeingUp();
 			Counter.HungerDown();
-		} else if (LunchAnswer == 2) {
+		} else if (lunchAnswer == 2) {
 			System.out.println(
 					"You head to Durfees spend your eight dollars efficiently and get some studying in for section later, \nrather than getting caught in conversation in a big dining hall.");
 			Counter.HungerDown();
-			HasStudied = true;
+			hasStudied = true;
 		} else {
 			System.out.println(
 					"You head to your personal residential college, but the food today is awful. \nYou can either choose to eat and damage your wellbeing(1), or not eat and go hungry(2)");
-			int ResColAnswer = console.nextInt();
-			if (ResColAnswer == 1) {
+			int resColAnswer = console.nextInt();
+			if (resColAnswer == 1) {
 				Counter.HungerDown();
 				Counter.WellbeingDown();
 			} else {
@@ -107,21 +107,21 @@ public class Scene {
 		Scanner console = new Scanner(System.in);
 		System.out.println(
 				"You finished your meal and decide that it is time to get some dedicated studying done, \nbut where do you go?  Sterling Memorial Library(1), Your suite(2), Cross Campus(3).");
-		int StudyAnswer = console.nextInt();
-		if (StudyAnswer == 1) {
+		int studyAnswer = console.nextInt();
+		if (studyAnswer == 1) {
 			System.out.println("A trip to the good-old-fashioned library");
-			if (HasStudied == true) {
+			if (hasStudied == true) {
 				System.out.println(
 						"Nerd! you study so often, but you know it's good for you. \nYou feel even less anxious about your classes.");
 				Counter.WellbeingUp();
 			} else {
-				HasStudied = true;
+				hasStudied = true;
 			}
-		} else if (StudyAnswer == 2) {
+		} else if (studyAnswer == 2) {
 			System.out.println(
 					"You decide to go to your suite, but you're suitemates are playing 3-player super smash brothers, \n you just can't help but be their 4th player.");
 			Counter.WellbeingUp();
-		} else if (StudyAnswer == 3) {
+		} else if (studyAnswer == 3) {
 			System.out.println(
 					"You go out onto the warm expanse of Cross Campus with the intent to study... \nBut it begins to rain, and you lose all drive to study.");
 			Counter.WellbeingDown();
@@ -130,25 +130,25 @@ public class Scene {
 
 	public static void Section() {
 		System.out.println();
-		double SectionAnswer1 = Math.round((Math.random() * 4));
-		double SectionAnswer2 = Math.round((Math.random() * 4));
+		double sectionAnswer1 = Math.round((Math.random() * 4));
+		double sectionAnswer2 = Math.round((Math.random() * 4));
 		System.out.println(
 				"After your \"Productive Study Session\" you decide to go to discussion section for your token humanities credit");
 		Scanner console = new Scanner(System.in);
 		System.out.println("Is there a section A**hole in this discussion(1/0)");
 
-		int AHoleAnswer = console.nextInt();
-		if (AHoleAnswer == 1) {
+		int aHoleAnswer = console.nextInt();
+		if (aHoleAnswer == 1) {
 			System.out.println(
 					"He really is annoying, but at least he dominates the discussion so you only have to answer one question");
 			System.out.println(
 					"If you studied earlier you get the question right automatically, \nif not pick a number between 0 and 4 and hope you're right");
-			if (HasStudied == true) {
+			if (hasStudied == true) {
 				System.out.println("You got it right!");
 				Counter.WellbeingUp();
 			}
-			int SectionGuess = console.nextInt();
-			if (SectionGuess == SectionAnswer1) {
+			int sectionGuess = console.nextInt();
+			if (sectionGuess == sectionAnswer1) {
 				System.out.println("Improvising on the spot, not too bad.");
 				Counter.WellbeingUp();
 			} 
@@ -157,25 +157,25 @@ public class Scene {
 			Counter.WellbeingDown();
 		}
 		}
-		if (AHoleAnswer == 0) {
+		if (aHoleAnswer == 0) {
 			System.out.println("Since you think there is no section A**hole, you must be the culprit yourself!");
 			System.out.println(
 					"Now you have to answer two questions because you talk too much, \nIf you studied earlier you get the question right automatically, \nif not pick two numbers between 0 and 4 and hope you're right");
-			if (HasStudied == true) {
+			if (hasStudied == true) {
 				System.out.println("You got them both right!");
 				Counter.Wellbeing2Up();
 				System.out.println("Too smart for your own good\n");
 			} else {
-				int SectionAGuess1 = console.nextInt();
-				if (SectionAGuess1 == SectionAnswer1) {
+				int sectionAGuess1 = console.nextInt();
+				if (sectionAGuess1 == SectionAnswer1) {
 					System.out.println("Improvising on the spot, not too bad.");
 					Counter.WellbeingUp();
 				} else {
 					System.out.println("Yea good try, but you embaress yourself in front of the entire discussion section");
 					Counter.WellbeingDown();
 				}
-				int SectionAGuess2 = console.nextInt();
-				if (SectionAGuess2 == SectionAnswer2) {
+				int sectionAGuess2 = console.nextInt();
+				if (sectionAGuess2 == SectionAnswer2) {
 					System.out.println("Improvising on the spot, not too bad.");
 					Counter.WellbeingUp();
 				} else {
@@ -203,15 +203,15 @@ public class Scene {
 
 	public static void Procrastinate() {
 		System.out.println();
-		DinnerSecond = 0;
+		dinnerSecond = 0;
 		System.out.println("Procrastination is essential for being a productive member of society: \nNetflix(1), Yale Memes for Special Snowflake Teens(2), A run to East Rock(3). Pick your Poison");
 		Scanner console = new Scanner(System.in);
-		int ProcrastinateAns = console.nextInt();
-			if (ProcrastinateAns == 1){
+		int procrastinateAns = console.nextInt();
+			if (procrastinateAns == 1){
 				System.out.println("You fire up Netflix but you are completly underwhelmed by the two episodes you watched and feel like you wasted time");
 				Counter.WellbeingDown();
 			}
-			else if (ProcrastinateAns == 2){
+			else if (procrastinateAns == 2){
 				System.out.println("You troll around for a couple hours and you finally stumble upon the meme of a lifetime");
 				Counter.WellbeingUp();
 				// cue Std.Draw Dope ass meme??????
@@ -339,7 +339,7 @@ public class Scene {
 		System.out.println();
 		System.out.println("Is it a buttery kind of night?(1/0)");
 		Scanner console = new Scanner(System.in);
-		int ButteryAns = console.nextInt();
+		int butteryAns = console.nextInt();
 			if(ButteryAns == 1){
 				System.out.println("You go to the buttery for a late night snack \nand you have a ball playing billiards with your best buds");
 				Counter.WellbeingUp();
@@ -357,8 +357,8 @@ public class Scene {
 	public static void Nighttime() {
 		System.out.println("The night air is chilly yet alive with the warmth of bustling bodies and alcohol.\n But you know you shouldn't go out tonight. Your unfinished pset fills you with guilt. \nDo you go to office hours(1) or bite the bullet and go to WOADS(2)?");
 		Scanner console = new Scanner(System.in);
-		int ProcrastinateAns = console.nextInt();
-			if (ProcrastinateAns == 1){
+		int nightAns = console.nextInt();
+			if (nightAns == 1){
 				System.out.println("You drag yourself through the cold to a tiny room full of panicking students and jovial TAs.\n Of course, there are a few students who are completely chill because they finished the pset the hour it was posted, \nthey only came here to laugh at plebs like you.\nOne of them points out that pizza was promised at office hours. \nYou could second his request for nourishment(1) or focus on your pset(2). Note that the pizza will be Papa Johns.");
 				int pizzaChoice = console.nextInt();
 				if (pizzaChoice == 1){
